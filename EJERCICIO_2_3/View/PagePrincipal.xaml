@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO_2_3.View.PagePrincipal">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+
+            <Button Text="Agregar Audio"
+                    x:Name="BtnCreateAudio" 
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    Clicked="BtnCreateAudio_Clicked"
+                    CornerRadius="10"/>
+            <Button Text="Listar Audios"
+                    x:Name="BtnListAudio" 
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    Clicked="BtnListAudio_Clicked"
+                    CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

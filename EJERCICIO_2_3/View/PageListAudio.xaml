@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO_2_3.View.PageListAudio"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Listado de audios" 
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                FontSize="20"
+                FontAttributes="Bold"/>
+
+            <ListView x:Name="ListAudio"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Reproducir"
+                                                   IconImageSource="audio2.png"
+                                                   BackgroundColor="#3498DB"
+                                                   Invoked="SwipeItem_Invoked"/>
+                                        
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <StackLayout Padding="10">
+
+                                    <Label Text="{Binding dateCreation}"
+                                            FontAttributes="Bold"
+                                            FontSize="15"/>
+
+                                    <Label Text="{Binding description}"
+                                            FontAttributes="Bold"
+                                            FontSize="15"/>
+
+                                </StackLayout>
+                            </SwipeView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

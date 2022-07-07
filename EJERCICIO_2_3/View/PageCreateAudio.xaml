@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO_2_3.View.PageCreateAudio">
+    <StackLayout Padding="15">
+        
+        <Image Source="audio.png"
+               HorizontalOptions="CenterAndExpand"
+               HeightRequest="200"/>
+
+        <Label x:Name="lblIsRecording" 
+               FontSize="16"
+               Text="Aun no esta grabando, presione el boton para comenzar"
+               FontAttributes="Italic"
+               TextColor="#3498DB"/>
+
+        <StackLayout Margin="0,20,0,0">
+            <Label Text="Descripcion" FontAttributes="Bold"/>
+            <Editor HeightRequest="100"
+                    Placeholder="Ingrese la descripcion del audio que esta grabando"
+                    x:Name="txtDescription"/>
+
+            <StackLayout>
+                <Button x:Name="BtnRecordAudio"
+                        Text="Comenzar a Grabar Audio"
+                        CornerRadius="10" 
+                        Clicked="BtnRecordAudio_Clicked"/>
+                <Button x:Name="BtnSaveAudio"
+                        Text="Guardar Audio"
+                        CornerRadius="10"
+                        Clicked="BtnSaveAudio_Clicked"/>
+                <Button x:Name="BtnListAudio"
+                        Text="Listar Audios"
+                        CornerRadius="10"
+                        Clicked="BtnListAudio_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+        
+        
+    </StackLayout>
+</ContentPage>
